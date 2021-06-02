@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from 'react'
-export const Search = () => {
-  const [params, setParams] = useState({
-    name: '',
-    pid: ''
-  })
+export const Search = ({ params, setParams }) => {
+
   const [users, setUsers] = useState([])
-  const [list, setList] = useState([])
   const change = (e) => {
     console.log('-----', e.target.value);
     setParams({
@@ -20,14 +16,7 @@ export const Search = () => {
       name: e.target.value
     })
   }
-  useEffect(() => {
-    console.log('====');
-    fetch('').then(async res => {
-      if (res.ok) {
-        setList(await res.json())
-      }
-    })
-  }, [params])
+
   return <form>
     <input type="text" value={params.name} onChange={(e) => { change(e) }} />
     <select id="" value={params.pid} onChange={(e) => { change2(e) }}>
