@@ -1,14 +1,14 @@
 import React from 'react'
 
 interface RobotProps {
-  id: string,
+  id: number,
   name: string,
   emial: string
 }
 
 const Robot: React.FC<RobotProps> = (props) => {
   const { id, name, emial } = props
-  return <div>{id}-{name}-{emial}</div>
+  return <div>{id}-----------{name}-------------------------{emial}</div>
 }
 
 
