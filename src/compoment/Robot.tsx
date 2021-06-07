@@ -1,5 +1,5 @@
 import React from 'react'
-
+import styles from './robot.module.css'
 interface RobotProps {
   id: number,
   name: string,
@@ -8,7 +8,7 @@ interface RobotProps {
 
 const Robot: React.FC<RobotProps> = (props) => {
   const { id, name, emial } = props
-  return <div>{id}-----------{name}-------------------------{emial}</div>
+  return <div className={styles.div}>{id}--{name}</div>
 }
 
 
