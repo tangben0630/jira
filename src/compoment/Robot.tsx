@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './robot.module.css'
+import ShoppingCart from './ShoppingCart'
 interface RobotProps {
   id: number,
   name: string,
@@ -8,7 +9,13 @@ interface RobotProps {
 
 const Robot: React.FC<RobotProps> = (props) => {
   const { id, name, emial } = props
-  return <div className={styles.div}>{id}--{name}</div>
+
+  return <div className={styles.di}>
+    <div>{id}</div>
+    <div>{name}</div>
+    <div>{emial}</div>
+    <ShoppingCart></ShoppingCart>
+  </div>
 }
 
 

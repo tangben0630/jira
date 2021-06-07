@@ -5,16 +5,44 @@ import styles from './App.module.css';
 
 import robots from './mock/robot.json'
 
+interface Props {
 
-function App() {
-  return (
-    <div className={styles.App}>
+}
+
+interface State {
+  robotGallery: any;
+}
+
+class App extends React.Component<Props, State> {
+  constructor(props) {
+    super(props)
+    this.state = {
+      robotGallery: []
+    }
+  }
+
+  componentDidMount() { }
+
+  render() {
+    return <div className={styles.App}>
       {
         robots.map(r => <Robot id={r.id} name={r.name} key={r.id} emial={r.email}></Robot>)
       }
       <div className={styles.aaa}>333</div>
     </div>
-  );
+  }
+
 }
+
+// function App() {
+//   return (
+//     <div className={styles.App}>
+//       {
+//         robots.map(r => <Robot id={r.id} name={r.name} key={r.id} emial={r.email}></Robot>)
+//       }
+//       <div className={styles.aaa}>333</div>
+//     </div>
+//   );
+// }
 
 export default App;
