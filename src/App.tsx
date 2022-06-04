@@ -2,13 +2,18 @@ import React, { createRef, useEffect, useReducer, useMemo, useRef, useState } fr
 import Robot from './compoment/Robot'
 // import './App.css'
 import styles from './App.module.css';
+import qs from 'qs'
 
 import robots from './mock/robot.json'
 
 
 function App() {
+  // qs.stringify()
   return (
-    <div className={styles.App}>
+    <div className={styles.App}
+      onClick={(e) => {
+
+      }}>
       {
         robots.map(r => <Robot id={r.id} name={r.name} key={r.id} emial={r.email}></Robot>)
       }

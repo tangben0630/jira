@@ -55,7 +55,7 @@
     "postcss-preset-env": "6.7.0",
     "postcss-safe-parser": "5.0.2",
     "prompts": "2.4.0",
-    "qs": "^6.10.1",
+    "qs": "^6.10.3",
     "react": "^17.0.2",
     "react-app-polyfill": "^2.0.0",
     "react-dev-utils": "^11.0.3",
@@ -80,6 +80,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
+    "json-server": "json-server __json-server/db.json --watch",
     "js": "json-server __json-server/db.json --watch --port 3008 --middlewares ./__json-server/middleware.js"
   },
   "eslintConfig": {
@@ -101,8 +102,9 @@
     ]
   },
   "devDependencies": {
-    "@types/qs": "^6.9.6",
+    "@types/qs": "^6.9.7",
     "http-server": "^0.12.3",
+    "prettier": "2.6.2",
     "typescript-plugin-css-modules": "^3.4.0"
   },
   "msw": {
